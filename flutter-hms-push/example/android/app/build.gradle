@@ -27,11 +27,12 @@ apply plugin: "com.huawei.agconnect"
 
 android {
     compileSdkVersion 33
+    ndkVersion "29.0.14033849"
 
     defaultConfig {
         applicationId "<package_name>"
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdkVersion 28
+        targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
