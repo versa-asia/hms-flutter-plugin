@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:3.6.0"
+        classpath "com.android.tools.build:gradle:8.12.0"
     }
 }
 
@@ -49,6 +49,6 @@ android {
 }
 
 dependencies {
-    implementation "com.huawei.hms:push:6.12.0.300"
+    implementation "com.huawei.hms:push:6.14.0.300"
     implementation "com.facebook.fresco:fresco:3.4.0"
 }
