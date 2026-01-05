@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:8.12.0"
+        classpath "com.android.tools.build:gradle:8.5.1"
     }
 }
 
@@ -24,31 +24,28 @@ rootProject.allprojects {
 apply plugin: "com.android.library"
 
 android {
-    compileSdkVersion 33
-    ndkVersion "29.0.14033849"
-    buildToolsVersion '31.0.0'
+    namespace 'com.huawei.hms.flutter.push'
+    compileSdk 35
+    ndkVersion "28.1.13356709"
 
     defaultConfig {
-        minSdkVersion 28
+        minSdkVersion 21
         targetSdkVersion 35
     }
 
-    lintOptions {
+    lint {
         disable "InvalidPackage"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    // Conditional for compatibility with AGP <4.2.
-    if (project.android.hasProperty("namespace")) {
-      namespace 'com.huawei.hms.flutter.push'
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 dependencies {
     implementation "com.huawei.hms:push:6.13.0.301"
     implementation "com.facebook.fresco:fresco:3.4.0"
+    implementation "androidx.annotation:annotation:1.8.2"
+    implementation "androidx.core:core:1.13.1"
 }
