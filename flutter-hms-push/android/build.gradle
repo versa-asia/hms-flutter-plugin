@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:3.6.0"
+        classpath "com.android.tools.build:gradle:8.5.1"
     }
 }
 
@@ -24,7 +24,7 @@ rootProject.allprojects {
 apply plugin: "com.android.library"
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 35
     buildToolsVersion '31.0.0'
 
     defaultConfig {
@@ -49,5 +49,7 @@ android {
 
 dependencies {
     implementation "com.huawei.hms:push:6.12.0.300"
-    implementation "com.facebook.fresco:fresco:3.1.3"
+    implementation "com.facebook.fresco:fresco:3.4.0"
+    implementation "androidx.annotation:annotation:1.8.2"
+    implementation "androidx.core:core:1.13.1"
 }
